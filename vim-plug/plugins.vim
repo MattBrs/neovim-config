@@ -1,11 +1,5 @@
 call plug#begin('~/.config/nvim/autoload/plugged')
 
- " Icons for nerdtree
- Plug 'ryanoasis/vim-devicons' 
-
- " File explorer
- Plug 'scrooloose/nerdtree'
-
  " Auto pairs for (, [, {
  Plug 'jiangmiao/auto-pairs'
 
@@ -24,5 +18,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
  " formatting 
  Plug 'lukas-reineke/lsp-format.nvim'
+
+ " file explorer
+ Plug 'nvim-tree/nvim-tree.lua'
+ Plug 'nvim-tree/nvim-web-devicons'
+
+
 
  call plug#end()

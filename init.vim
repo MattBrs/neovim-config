@@ -1,4 +1,5 @@
 source ~/.config/nvim/vim-plug/plugins.vim
+source ~/.config/nvim/keybindings.vim
 
 set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching 
@@ -25,19 +26,17 @@ set ttyfast                 " Speed up scrolling in Vim"
 " set noswapfile            " disable creating swap file" 
 " set backupdir=~/.cache/vim " Directory to store backup files.
 
-" use <tab> to trigger completion and navigate to the next complete item
-function! CheckBackspace() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
+lua << EOF
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+vim.opt.termguicolors = true
+require("nvim-tree").setup()
+EOF
 
-inoremap <silent><expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
-inoremap <silent><expr> <Tab>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
 
-inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
-inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
 
 colorscheme monokai_ristretto
+
+
+
+
