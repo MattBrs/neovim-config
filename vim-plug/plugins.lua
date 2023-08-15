@@ -22,11 +22,10 @@ vim.call('plug#begin', '~/.config/nvim/autoload/plugged')
  -- formatting 
  Plug 'lukas-reineke/lsp-format.nvim'
 
- -- file explorer
- Plug 'nvim-tree/nvim-tree.lua'
- Plug 'nvim-tree/nvim-web-devicons'
-
  -- Better syntax highlighting
- -- Plug('nvim-treesitter/nvim-treesitter', {do = ':TSUpdate'})
+ Plug 'nvim-treesitter/nvim-treesitter'
+ 
+ -- file manager written in lua
+ Plug "elihunter173/dirbuf.nvim"
 
 vim.call('plug#end')

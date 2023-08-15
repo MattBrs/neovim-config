@@ -1,4 +1,5 @@
 dofile('/home/matteo/.config/nvim/vim-plug/plugins.lua')
+dofile('/home/matteo/.config/nvim/tree-sitter-config.lua')
 vim.cmd('source ~/.config/nvim/keybindings.vim')
 
 local set = vim.opt
@@ -22,8 +23,6 @@ set.shiftwidth = 4
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
-require("nvim-tree").setup()
-
 
 vim.cmd("colorscheme monokai_ristretto")
 

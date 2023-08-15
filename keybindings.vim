@@ -11,13 +11,21 @@ inoremap <silent><expr> <Tab>
       \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
 
+" go forward with tab in list of completition
 inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
+
+" go back with tab in list of completition
 inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
 
 " set main keybindings
-nmap <Space>ft :NvimTreeToggle<CR>
-nmap <Space>ff :Telescope fd<CR>
-nmap <Space>fp :Telescope live_grep<CR>
 
+" find file in project
+nmap <Space>ff :Telescope fd<CR>
+
+" find text in project
+nmap <Space>ftp :Telescope live_grep<CR>
+
+" file manager (add, delete, navigate files)
+nmap <Space>fm :Dirbuf<CR>
 
 
