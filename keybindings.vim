@@ -20,10 +20,10 @@ inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
 " set main keybindings
 
 " find file in project
-nmap <Space>ff :Telescope fd<CR>
+nmap <Space>ff :FzfLua files<CR>
 
 " find text in project
-nmap <Space>ftp :Telescope live_grep<CR>
+nmap <Space>ftp :FzfLua live_grep<CR>
 
 " file manager (add, delete, navigate files)
 nmap <Space>fm :Dirbuf<CR>

@@ -15,10 +15,6 @@ vim.call('plug#begin', '~/.config/nvim/autoload/plugged')
  -- Monokai theme
  Plug 'tanvirtin/monokai.nvim'
 
- -- file search
- Plug 'nvim-lua/plenary.nvim'
- Plug('nvim-telescope/telescope.nvim', { branch = '0.1.x' })
-
  -- formatting 
  Plug 'lukas-reineke/lsp-format.nvim'
 
@@ -28,4 +24,9 @@ vim.call('plug#begin', '~/.config/nvim/autoload/plugged')
  -- file manager written in lua
  Plug "elihunter173/dirbuf.nvim"
 
+ -- debugger
+ Plug 'mfussenegger/nvim-dap'
+
+ -- fuzzy finder
+ Plug("ibhagwan/fzf-lua", {branch= "main"})
 vim.call('plug#end')
