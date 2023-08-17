@@ -26,4 +26,5 @@ vim.opt.termguicolors = true
 
 vim.cmd("colorscheme monokai_ristretto")
 
-
+require'hop'.setup()
+require'Comment'.setup()

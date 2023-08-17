@@ -1,4 +1,3 @@
-
 local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.config/nvim/autoload/plugged')
@@ -29,4 +28,11 @@ vim.call('plug#begin', '~/.config/nvim/autoload/plugged')
 
  -- fuzzy finder
  Plug("ibhagwan/fzf-lua", {branch= "main"})
+
+ -- faster text hopping 
+ Plug 'phaazon/hop.nvim'
+
+ -- comments
+ Plug 'numToStr/Comment.nvim'
+
 vim.call('plug#end')
