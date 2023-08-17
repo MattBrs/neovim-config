@@ -8,9 +8,6 @@ vim.call('plug#begin', '~/.config/nvim/autoload/plugged')
  -- Better syntax support
  Plug 'sheerun/vim-polyglot'
 
- -- Code completition
- Plug('neoclide/coc.nvim', {branch = 'release'})
-
  -- Monokai theme
  Plug 'tanvirtin/monokai.nvim'
 
@@ -34,5 +31,20 @@ vim.call('plug#begin', '~/.config/nvim/autoload/plugged')
 
  -- comments
  Plug 'numToStr/Comment.nvim'
+
+ -- LSP Support
+ Plug 'neovim/nvim-lspconfig'             
+ Plug 'williamboman/mason.nvim'          
+ Plug 'williamboman/mason-lspconfig.nvim' 
+
+ -- Autocompletion
+ Plug 'hrsh7th/nvim-cmp'     
+ Plug 'hrsh7th/cmp-nvim-lsp' 
+ Plug 'L3MON4D3/LuaSnip'     
+
+ Plug('VonHeikemen/lsp-zero.nvim', {branch= 'v2.x'})
+
+ -- function signature help
+ Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
 
 vim.call('plug#end')
