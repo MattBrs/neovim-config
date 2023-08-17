@@ -73,6 +73,5 @@ cmp.setup({
         { name = 'nvim_lsp_signature_help' }, 
         { name = 'buffer'}, {name = 'nvim_lsp'}, {name = "ultisnips" },
         { name = "nvim_lua"}, {name = "look"}, {name = "path" },
-        { name = 'cmp_tabnine'}, {name = "calc"}, {name = "spell" },
     },
 })
