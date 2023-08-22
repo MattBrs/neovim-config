@@ -47,4 +47,6 @@ vim.call('plug#begin', '~/.config/nvim/autoload/plugged')
  -- function signature help
  Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
 
+ -- formatter
+ Plug 'mhartington/formatter.nvim'
 vim.call('plug#end')
