@@ -1,5 +1,5 @@
-dofile('/home/matteo/.config/nvim/vim-plug/plugins.lua')
-dofile('/home/matteo/.config/nvim/tree-sitter-config.lua')
+require('plugins')
+require('tree-sitter-config')
 vim.cmd('source ~/.config/nvim/keybindings.vim')
 
 local set = vim.opt
