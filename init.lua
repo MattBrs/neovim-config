@@ -71,7 +71,7 @@ cmp.setup({
 	    ),
     }),
     sources = {
-        { name = 'nvim_lsp_signature_help' }, 
+        { name = 'nvim_lsp_signature_help' },
         { name = 'buffer'}, {name = 'nvim_lsp'}, {name = "ultisnips" },
         { name = "nvim_lua"}, {name = "look"}, {name = "path" },
     },
@@ -130,6 +130,12 @@ require("formatter").setup {
                 try_node_modules = true,
             }
         end
+    },
+    c = {
+        require("formatter.filetypes.c").clangFormat,
+    },
+    typescript = {
+        require("formatter.filetypes.typescript").prettier,
     },
     -- Use the special "*" filetype for defining formatter configurations on
     -- any filetype
