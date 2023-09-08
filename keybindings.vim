@@ -1,6 +1,9 @@
 " find file in project
 nmap <Space>ff :FzfLua files<CR>
 
+" find file in opened buffers
+nmap <Space>fb :FzfLua buffers<CR>
+
 " find text in project
 nmap <Space>ftp :FzfLua live_grep<CR>
 
