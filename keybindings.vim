@@ -19,3 +19,7 @@ nmap <Space>hl :HopLine<CR>
 nmap <Space>ha :HopAnywhere<CR>
 nmap <Space>ca :lua vim.lsp.buf.code_action()<CR>
 nmap <Space>cf :Format<CR>
+
+nmap <Space>ut :UndotreeToggle<CR>
+
+nmap <Space>s :w<CR>:Format<CR>:w<CR>

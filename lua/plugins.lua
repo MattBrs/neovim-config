@@ -49,4 +49,7 @@ vim.call('plug#begin', '~/.config/nvim/autoload/plugged')
 
  -- formatter
  Plug 'mhartington/formatter.nvim'
+
+ -- undo branches
+ Plug 'mbbill/undotree'
 vim.call('plug#end')
