@@ -2,54 +2,55 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.config/nvim/autoload/plugged')
 
- -- Auto pairs for (, [, {
- Plug 'jiangmiao/auto-pairs'
+-- Auto pairs for (, [, {
+-- Plug 'jiangmiao/auto-pairs'
+Plug 'windwp/nvim-autopairs'
 
- -- Better syntax support
- Plug 'sheerun/vim-polyglot'
+-- Better syntax support
+Plug 'sheerun/vim-polyglot'
 
- -- Monokai theme
- Plug 'tanvirtin/monokai.nvim'
+-- Monokai theme
+Plug 'tanvirtin/monokai.nvim'
 
- -- formatting 
- Plug 'lukas-reineke/lsp-format.nvim'
+-- formatting
+Plug 'lukas-reineke/lsp-format.nvim'
 
- -- Better syntax highlighting
- Plug 'nvim-treesitter/nvim-treesitter'
- 
- -- file manager written in lua
- Plug "elihunter173/dirbuf.nvim"
+-- Better syntax highlighting
+Plug 'nvim-treesitter/nvim-treesitter'
 
- -- debugger
- Plug 'mfussenegger/nvim-dap'
+-- file manager written in lua
+Plug "elihunter173/dirbuf.nvim"
 
- -- fuzzy finder
- Plug("ibhagwan/fzf-lua", {branch= "main"})
+-- debugger
+Plug 'mfussenegger/nvim-dap'
 
- -- faster text hopping 
- Plug 'phaazon/hop.nvim'
+-- fuzzy finder
+Plug("ibhagwan/fzf-lua", { branch = "main" })
 
- -- comments
- Plug 'numToStr/Comment.nvim'
+-- faster text hopping
+Plug 'phaazon/hop.nvim'
 
- -- LSP Support
- Plug 'neovim/nvim-lspconfig'             
- Plug 'williamboman/mason.nvim'          
- Plug 'williamboman/mason-lspconfig.nvim' 
+-- comments
+Plug 'numToStr/Comment.nvim'
 
- -- Autocompletion
- Plug 'hrsh7th/nvim-cmp'     
- Plug 'hrsh7th/cmp-nvim-lsp' 
- Plug 'L3MON4D3/LuaSnip'     
+-- LSP Support
+Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
 
- Plug('VonHeikemen/lsp-zero.nvim', {branch= 'v2.x'})
+-- Autocompletion
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'L3MON4D3/LuaSnip'
 
- -- function signature help
- Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
+Plug('VonHeikemen/lsp-zero.nvim', { branch = 'v2.x' })
 
- -- formatter
- Plug 'mhartington/formatter.nvim'
+-- function signature help
+Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
 
- -- undo branches
- Plug 'mbbill/undotree'
+-- formatter
+Plug 'mhartington/formatter.nvim'
+
+-- undo branches
+Plug 'mbbill/undotree'
 vim.call('plug#end')

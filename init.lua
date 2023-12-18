@@ -80,6 +80,8 @@ cmp.setup({
 -- Utilities for creating configurations
 local util = require("formatter.util")
 
+require("nvim-autopairs").setup {}
+
 -- Provides the Format, FormatWrite, FormatLock, and FormatWriteLock commands
 require("formatter").setup({
     -- Enable or disable logging
