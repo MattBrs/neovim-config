@@ -27,6 +27,8 @@ Plug 'mfussenegger/nvim-dap'
 -- fuzzy finder
 Plug("ibhagwan/fzf-lua", { branch = "main" })
 
+Plug("akinsho/toggleterm.nvim", { tag = "*" })
+
 -- faster text hopping
 Plug 'phaazon/hop.nvim'
 
@@ -53,4 +55,7 @@ Plug 'mhartington/formatter.nvim'
 
 -- undo branches
 Plug 'mbbill/undotree'
+
+Plug 'lewis6991/gitsigns.nvim'
+
 vim.call('plug#end')
