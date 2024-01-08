@@ -58,4 +58,5 @@ Plug 'mbbill/undotree'
 
 Plug 'lewis6991/gitsigns.nvim'
 
+Plug 'folke/trouble.nvim'
 vim.call('plug#end')
