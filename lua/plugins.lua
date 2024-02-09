@@ -61,4 +61,8 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'folke/trouble.nvim'
 
 Plug 'kdheepak/lazygit.nvim'
+
+Plug 'nvim-tree/nvim-web-devicons'
+
+Plug 'xiyaowong/transparent.nvim'
 vim.call('plug#end')

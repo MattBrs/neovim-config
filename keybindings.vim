@@ -18,6 +18,8 @@ nmap <Space>hw :HopWord<CR>
 nmap <Space>hl :HopLine<CR>
 nmap <Space>ha :HopAnywhere<CR>
 nmap <Space>ca :lua vim.lsp.buf.code_action()<CR>
+nmap <Space>ck :lua vim.lsp.buf.hover()<CR>
+
 nmap <Space>cf :Format<CR>
 
 nmap <Space>ut :UndotreeToggle<CR>
