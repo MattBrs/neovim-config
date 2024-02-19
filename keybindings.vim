@@ -1,5 +1,8 @@
 " find file in project
-nmap <Space>ff :FzfLua files<CR>
+nmap <Space>ff :FzfLua git_files<CR>
+
+nmap <Space>fp :FzfLua files<CR>
+
 
 " find file in opened buffers
 nmap <Space>fb :FzfLua buffers<CR>
