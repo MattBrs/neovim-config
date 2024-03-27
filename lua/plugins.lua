@@ -65,4 +65,6 @@ Plug 'kdheepak/lazygit.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
 
 Plug 'xiyaowong/transparent.nvim'
+
+Plug 'jghauser/mkdir.nvim'
 vim.call('plug#end')

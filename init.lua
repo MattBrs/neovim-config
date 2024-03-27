@@ -2,6 +2,9 @@ require("plugins")
 require("tree-sitter-config")
 vim.cmd("source ~/.config/nvim/keybindings.vim")
 
+vim.lsp.set_log_level("off")
+
+
 local set = vim.opt
 
 set.cursorline = true
