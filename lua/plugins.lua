@@ -23,6 +23,9 @@ Plug "elihunter173/dirbuf.nvim"
 
 -- debugger
 Plug 'mfussenegger/nvim-dap'
+Plug 'mfussenegger/nvim-dap'
+Plug 'nvim-neotest/nvim-nio'
+Plug 'rcarriga/nvim-dap-ui'
 
 -- fuzzy finder
 Plug("ibhagwan/fzf-lua", { branch = "main" })
