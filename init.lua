@@ -28,7 +28,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
-vim.cmd("colorscheme monokai")
+vim.cmd("colorscheme kanagawa-wave")
 
 -- setup plugins
 require("hop").setup()

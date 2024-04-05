@@ -70,4 +70,6 @@ Plug 'nvim-tree/nvim-web-devicons'
 Plug 'xiyaowong/transparent.nvim'
 
 Plug 'jghauser/mkdir.nvim'
+
+Plug 'rebelot/kanagawa.nvim'
 vim.call('plug#end')
