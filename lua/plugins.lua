@@ -62,18 +62,24 @@ Plug 'mhartington/formatter.nvim'
 -- undo branches
 Plug 'mbbill/undotree'
 
+-- git info beside the code
 Plug 'lewis6991/gitsigns.nvim'
 
 Plug 'folke/trouble.nvim'
 
+-- best git manager
 Plug 'kdheepak/lazygit.nvim'
 
+-- silly icons
 Plug 'nvim-tree/nvim-web-devicons'
 
+-- make nvim transparent
 Plug 'xiyaowong/transparent.nvim'
 
+-- make dirs recursively before saving file
 Plug 'jghauser/mkdir.nvim'
 
 
+-- theme
 Plug 'EdenEast/nightfox.nvim'
 vim.call('plug#end')
