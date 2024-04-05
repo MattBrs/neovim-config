@@ -39,3 +39,5 @@ nmap <Space>dc :lua require'dap'.continue()<CR>
 nmap <Space>dbt :lua require'dap'.toggle_breakpoint()<CR>
 nmap <Space>dsi :lua require'dap'.step_into()<CR>
 nmap <Space>dso :lua require'dap'.step_over()<CR>
+
+xnoremap p P
