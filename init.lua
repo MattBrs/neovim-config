@@ -182,3 +182,11 @@ dap.configurations.cpp = {
         -- runInTerminal = false,
     },
 }
+
+
+
+vim.keymap.set("n", "<Space>rtp", function()
+    local pattern = vim.fn.input("Enter pattern to search: ")
+    local replacement = vim.fn.input("Enter replacement for pattern: ")
+    os.execute("ack -l '" .. pattern .. "' | xargs perl -pi -E 's/" .. pattern .. "/" .. replacement .. "/g'")
+end)
