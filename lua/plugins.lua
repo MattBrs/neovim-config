@@ -72,4 +72,6 @@ Plug 'xiyaowong/transparent.nvim'
 Plug 'jghauser/mkdir.nvim'
 
 Plug 'rebelot/kanagawa.nvim'
+
+Plug 'EdenEast/nightfox.nvim'
 vim.call('plug#end')
