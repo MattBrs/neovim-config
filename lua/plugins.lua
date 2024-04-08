@@ -7,7 +7,7 @@ vim.call('plug#begin', '~/.config/nvim/autoload/plugged')
 Plug 'windwp/nvim-autopairs'
 
 -- Better syntax support
-Plug 'sheerun/vim-polyglot'
+-- Plug 'sheerun/vim-polyglot'
 
 -- Monokai theme
 Plug 'tanvirtin/monokai.nvim'
@@ -71,7 +71,6 @@ Plug 'xiyaowong/transparent.nvim'
 
 Plug 'jghauser/mkdir.nvim'
 
-Plug 'rebelot/kanagawa.nvim'
 
 Plug 'EdenEast/nightfox.nvim'
 vim.call('plug#end')
