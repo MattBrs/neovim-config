@@ -9,6 +9,9 @@ Plug 'windwp/nvim-autopairs'
 -- Better syntax support
 -- Plug 'sheerun/vim-polyglot'
 
+-- multicursor
+Plug 'mg979/vim-visual-multi'
+
 -- Monokai theme
 Plug 'tanvirtin/monokai.nvim'
 
