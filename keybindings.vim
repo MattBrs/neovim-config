@@ -40,7 +40,7 @@ nmap <Space>dso :lua require'dap'.step_over()<CR>
 
 " terminal
 nmap <Space>tt :ToggleTerm<CR>
-tmap <Esc> <C-\><C-n>
+tmap <Space>tt <C-\><C-n>:ToggleTerm<CR>
 
 
 xnoremap p P
