@@ -82,4 +82,7 @@ Plug 'jghauser/mkdir.nvim'
 
 -- theme
 Plug 'EdenEast/nightfox.nvim'
+
+-- peek rows without moving
+Plug 'nacro90/numb.nvim'
 vim.call('plug#end')

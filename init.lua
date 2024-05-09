@@ -152,7 +152,7 @@ require("formatter").setup({
 local dap = require('dap')
 dap.adapters.lldb = {
     type = 'executable',
-    command = '/usr/local/Cellar/llvm/17.0.6_1/bin/lldb-vscode', -- adjust as needed, must be absolute path
+    command = '/usr/local/Cellar/llvm@14/14.0.6/bin/lldb-vscode', -- adjust as needed, must be absolute path
     name = 'lldb'
 }
 
@@ -183,10 +183,12 @@ dap.configurations.cpp = {
     },
 }
 
+require('numb').setup()
 
 
-vim.keymap.set("n", "<Space>rtp", function()
-    local pattern = vim.fn.input("Enter pattern to search: ")
-    local replacement = vim.fn.input("Enter replacement for pattern: ")
-    os.execute("ag -l '" .. pattern .. "' | xargs perl -pi -E 's/" .. pattern .. "/" .. replacement .. "/g'")
-end)
+
+-- vim.keymap.set("n", "<Space>rtp", function()
+--     local pattern = vim.fn.input("Enter pattern to search: ")
+--     local replacement = vim.fn.input("Enter replacement for pattern: ")
+--     os.execute("ag -l '" .. pattern .. "' | xargs perl -pi -E 's/" .. pattern .. "/" .. replacement .. "/g'")
+-- end)
