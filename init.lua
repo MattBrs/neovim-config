@@ -186,9 +186,26 @@ dap.configurations.cpp = {
 require('numb').setup()
 
 
+function PopulateArgs(text)
+    local command = string.format("args `rg -l %s`", text)
+    vim.cmd(command)
+end
 
--- vim.keymap.set("n", "<Space>rtp", function()
---     local pattern = vim.fn.input("Enter pattern to search: ")
---     local replacement = vim.fn.input("Enter replacement for pattern: ")
---     os.execute("ag -l '" .. pattern .. "' | xargs perl -pi -E 's/" .. pattern .. "/" .. replacement .. "/g'")
--- end)
+function Replace(pattern, text)
+    local command = "argdo %s/" .. pattern .. "/" .. text .. "/gc"
+    vim.cmd(command)
+end
+
+function SaveFiles()
+    local command = "argdo update"
+    vim.cmd(command)
+end
+
+vim.keymap.set("n", "<Space>rtp", function()
+    local pattern = vim.fn.input("Enter pattern to search: ")
+    local replacement = vim.fn.input("Enter replacement for pattern: ")
+
+    PopulateArgs(pattern)
+    Replace(pattern, replacement)
+    SaveFiles()
+end)
