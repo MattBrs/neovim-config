@@ -27,7 +27,7 @@ nmap <Space>cf :Format<CR>
 
 nmap <Space>ut :UndotreeToggle<CR>
 
-nmap <Space>s :w<CR>:Format<CR>:w<CR>
+nmap <Space>s :w<CR>:FormatWrite<CR>
 
 nmap <Space>gg :LazyGit<CR>
 

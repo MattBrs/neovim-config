@@ -86,4 +86,6 @@ Plug 'EdenEast/nightfox.nvim'
 -- peek rows without moving
 Plug 'nacro90/numb.nvim'
 
+
+Plug 'simrat39/rust-tools.nvim'
 vim.call('plug#end')

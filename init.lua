@@ -50,6 +50,10 @@ require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
 
 lsp.setup()
 
+
+
+
+
 local cmp = require("cmp")
 cmp.setup({
     mapping = cmp.mapping.preset.insert({
@@ -82,6 +86,22 @@ cmp.setup({
         { name = "path" },
     },
 })
+
+
+
+local rt = require("rust-tools")
+
+rt.setup({
+    server = {
+        on_attach = function(_, bufnr)
+            -- Hover actions
+            vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+            -- Code action groups
+            vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+        end,
+    },
+})
+
 
 -- Utilities for creating configurations
 local util = require("formatter.util")
@@ -152,7 +172,7 @@ require("formatter").setup({
 local dap = require('dap')
 dap.adapters.lldb = {
     type = 'executable',
-    command = '/usr/local/Cellar/llvm@14/14.0.6/bin/lldb-vscode', -- adjust as needed, must be absolute path
+    command = '/usr/local/Cellar/llvm@17/17.0.6/bin/lldb-vscode', -- adjust as needed, must be absolute path
     name = 'lldb'
 }
 
