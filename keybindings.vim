@@ -26,6 +26,8 @@ nmap <Space>ck :lua vim.lsp.buf.hover()<CR>
 nmap <Space>cf :Format<CR>
 
 nmap <Space>ut :UndotreeToggle<CR>
+nmap <Space>uf :UndotreeFocus<CR>
+
 
 nmap <Space>s :w<CR>:FormatWrite<CR>
 

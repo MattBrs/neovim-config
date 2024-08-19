@@ -1,34 +1,34 @@
-local Plug = vim.fn['plug#']
+local Plug = vim.fn["plug#"]
 
-vim.call('plug#begin', '~/.config/nvim/autoload/plugged')
+vim.call("plug#begin", "~/.config/nvim/autoload/plugged")
 
 -- Auto pairs for (, [, {
 -- Plug 'jiangmiao/auto-pairs'
-Plug 'windwp/nvim-autopairs'
+Plug("windwp/nvim-autopairs")
 
 -- Better syntax support
 -- Plug 'sheerun/vim-polyglot'
 
 -- multicursor
-Plug 'mg979/vim-visual-multi'
+Plug("mg979/vim-visual-multi")
 
 -- Monokai theme
-Plug 'tanvirtin/monokai.nvim'
+Plug("tanvirtin/monokai.nvim")
 
 -- formatting
-Plug 'lukas-reineke/lsp-format.nvim'
+Plug("lukas-reineke/lsp-format.nvim")
 
 -- Better syntax highlighting
-Plug 'nvim-treesitter/nvim-treesitter'
+Plug("nvim-treesitter/nvim-treesitter")
 
 -- file manager written in lua
-Plug "elihunter173/dirbuf.nvim"
+Plug("elihunter173/dirbuf.nvim")
 
 -- debugger
-Plug 'mfussenegger/nvim-dap'
-Plug 'mfussenegger/nvim-dap'
-Plug 'nvim-neotest/nvim-nio'
-Plug 'rcarriga/nvim-dap-ui'
+Plug("mfussenegger/nvim-dap")
+Plug("mfussenegger/nvim-dap")
+Plug("nvim-neotest/nvim-nio")
+Plug("rcarriga/nvim-dap-ui")
 
 -- fuzzy finder
 Plug("ibhagwan/fzf-lua", { branch = "main" })
@@ -36,56 +36,56 @@ Plug("ibhagwan/fzf-lua", { branch = "main" })
 Plug("akinsho/toggleterm.nvim", { tag = "*" })
 
 -- faster text hopping
-Plug 'phaazon/hop.nvim'
+Plug("phaazon/hop.nvim")
 
 -- comments
-Plug 'numToStr/Comment.nvim'
+Plug("numToStr/Comment.nvim")
 
 -- LSP Support
-Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/mason.nvim'
-Plug 'williamboman/mason-lspconfig.nvim'
+Plug("neovim/nvim-lspconfig")
+Plug("williamboman/mason.nvim")
+Plug("williamboman/mason-lspconfig.nvim")
 
 -- Autocompletion
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'L3MON4D3/LuaSnip'
+Plug("hrsh7th/nvim-cmp")
+Plug("hrsh7th/cmp-nvim-lsp")
+Plug("L3MON4D3/LuaSnip")
 
-Plug('VonHeikemen/lsp-zero.nvim', { branch = 'v2.x' })
+Plug("VonHeikemen/lsp-zero.nvim", { branch = "v2.x" })
 
 -- function signature help
-Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
+Plug("hrsh7th/cmp-nvim-lsp-signature-help")
 
 -- formatter
-Plug 'mhartington/formatter.nvim'
+Plug("mhartington/formatter.nvim")
 
 -- undo branches
-Plug 'mbbill/undotree'
+Plug("mbbill/undotree")
 
 -- git info beside the code
-Plug 'lewis6991/gitsigns.nvim'
+Plug("lewis6991/gitsigns.nvim")
 
-Plug 'folke/trouble.nvim'
+Plug("folke/trouble.nvim")
 
 -- best git manager
-Plug 'kdheepak/lazygit.nvim'
+Plug("kdheepak/lazygit.nvim")
 
 -- silly icons
-Plug 'nvim-tree/nvim-web-devicons'
+Plug("nvim-tree/nvim-web-devicons")
 
 -- make nvim transparent
-Plug 'xiyaowong/transparent.nvim'
+Plug("xiyaowong/transparent.nvim")
 
 -- make dirs recursively before saving file
-Plug 'jghauser/mkdir.nvim'
-
+Plug("jghauser/mkdir.nvim")
 
 -- theme
-Plug 'EdenEast/nightfox.nvim'
+Plug("EdenEast/nightfox.nvim")
 
 -- peek rows without moving
-Plug 'nacro90/numb.nvim'
+Plug("nacro90/numb.nvim")
 
+Plug("simrat39/rust-tools.nvim")
 
-Plug 'simrat39/rust-tools.nvim'
-vim.call('plug#end')
+Plug("ojroques/nvim-hardline")
+vim.call("plug#end")
