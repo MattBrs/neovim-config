@@ -46,3 +46,7 @@ tmap <Space>tt <C-\><C-n>:ToggleTerm<CR>
 
 
 xnoremap p P
+
+inoremap <silent><expr> <C-c> copilot#Accept("")
+let g:copilot_no_tab_map = 1
+

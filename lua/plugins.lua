@@ -88,4 +88,8 @@ Plug("nacro90/numb.nvim")
 Plug("simrat39/rust-tools.nvim")
 
 Plug("ojroques/nvim-hardline")
+
+Plug("Mofiqul/dracula.nvim")
+
+Plug("github/copilot.vim")
 vim.call("plug#end")
