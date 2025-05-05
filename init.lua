@@ -59,6 +59,9 @@ require("hardline").setup({
 })
 
 local lsp = require("lsp-zero").preset({})
+vim.diagnostic.config({
+	virtual_text = true,
+})
 
 lsp.on_attach(function(client, bufnr)
 	-- see :help lsp-zero-keybindings
