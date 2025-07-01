@@ -72,6 +72,17 @@ end)
 -- (Optional) Configure lua language server for neovim
 require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
 
+-- require("lspconfig").clangd.setup({
+-- 	cmd = {
+-- 		"clangd",
+-- 		"--log=verbose", -- Sets log level to verbose
+-- 		"--pretty", -- Makes logs more readable
+-- 		"--fallback-flags=-std=c++20", -- A sane fallback in case compile_commands.json fails for some reason
+-- 		-- Remove any --compile-commands-dir if you added it, let .clangd handle it or auto-detection
+-- 	},
+-- 	-- ... other clangd settings
+-- })
+--
 lsp.setup()
 
 -- vim.lsp.inlay_hint.enable(true)

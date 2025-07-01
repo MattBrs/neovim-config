@@ -91,5 +91,5 @@ Plug("ojroques/nvim-hardline")
 
 Plug("Mofiqul/dracula.nvim")
 
-Plug("github/copilot.vim")
+-- Plug("github/copilot.vim")
 vim.call("plug#end")
