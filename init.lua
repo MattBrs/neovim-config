@@ -16,7 +16,7 @@ set.autoindent = true
 set.ignorecase = true
 set.expandtab = true
 set.relativenumber = true
-set.clipboard = "unnamedplus"
+set.clipboard = "unnamed,unnamedplus"
 set.ttyfast = true
 set.syntax = "true"
 set.showmatch = true
@@ -29,7 +29,14 @@ vim.opt.termguicolors = true
 vim.opt.swapfile = false
 
 -- vim.cmd("colorscheme catpuccin")
-vim.cmd.colorscheme("monokai_ristretto")
+
+vim.g.gruvbox_material_background = "hard"
+vim.g.gruvbox_material_foreground = "original"
+vim.g.gruvbox_material_transparent_background = 2
+
+-- vim.g.gruvbox_material_background('hard')
+vim.cmd.colorscheme("gruvbox-material")
+
 -- setup plugins
 require("hop").setup()
 require("Comment").setup()
@@ -58,19 +65,46 @@ require("hardline").setup({
 	},
 })
 
-local lsp = require("lsp-zero").preset({})
+-- local lsp = require("lsp-zero").preset({})
 vim.diagnostic.config({
 	virtual_text = true,
 })
-
-lsp.on_attach(function(client, bufnr)
-	-- see :help lsp-zero-keybindings
-	-- to learn the available actions
-	lsp.default_keymaps({ buffer = bufnr })
-end)
+--
+-- lsp.on_attach(function(client, bufnr)
+-- 	-- see :help lsp-zero-keybindings
+-- 	-- to learn the available actions
+-- 	lsp.default_keymaps({ buffer = bufnr })
+-- end)
 
 -- (Optional) Configure lua language server for neovim
-require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
+-- require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
+
+local lsps = {
+	{ "rust_analyzer" },
+	{ "gopls" },
+	{ "ts_ls" },
+	{ "cssls" },
+	{ "lua_ls" },
+	{ "hls" },
+	{
+		"clangd",
+		{
+			init_options = {
+				fallbackFlags = { "--std=c23" },
+			},
+		},
+	},
+}
+
+for _, lsp in pairs(lsps) do
+	local name, config = lsp[1], lsp[2]
+
+	vim.lsp.enable(name)
+
+	if config then
+		vim.lsp.config(name, config)
+	end
+end
 
 -- require("lspconfig").clangd.setup({
 -- 	cmd = {
@@ -83,7 +117,7 @@ require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
 -- 	-- ... other clangd settings
 -- })
 --
-lsp.setup()
+-- lsp.setup()
 
 -- vim.lsp.inlay_hint.enable(true)
 

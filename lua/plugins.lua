@@ -15,6 +15,9 @@ Plug("mg979/vim-visual-multi")
 -- Monokai theme
 Plug("tanvirtin/monokai.nvim")
 
+Plug("catppuccin/nvim", { as = "catppuccin" })
+Plug("sainnhe/gruvbox-material")
+
 -- formatting
 Plug("lukas-reineke/lsp-format.nvim")
 
