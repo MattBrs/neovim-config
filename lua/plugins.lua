@@ -54,7 +54,7 @@ Plug("hrsh7th/nvim-cmp")
 Plug("hrsh7th/cmp-nvim-lsp")
 Plug("L3MON4D3/LuaSnip")
 
-Plug("VonHeikemen/lsp-zero.nvim", { branch = "v2.x" })
+-- Plug("VonHeikemen/lsp-zero.nvim", { branch = "v2.x" })
 
 -- function signature help
 Plug("hrsh7th/cmp-nvim-lsp-signature-help")
