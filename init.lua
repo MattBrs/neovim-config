@@ -2,6 +2,7 @@ require("config.lazy")
 require("config.lsp")
 require("config.tree_sitter")
 require("config.conform")
+vim.cmd("source ~/.config/nvim/keybindings.vim")
 
 vim.lsp.set_log_level("off")
 
