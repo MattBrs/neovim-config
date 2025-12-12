@@ -1,7 +1,6 @@
 require("config.lazy")
 require("config.lsp")
 require("config.tree_sitter")
-require("config.conform")
 vim.cmd("source ~/.config/nvim/keybindings.vim")
 
 vim.lsp.set_log_level("off")
@@ -30,4 +29,32 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 vim.opt.swapfile = false
 
-vim.cmd.colorscheme("habamax")
+vim.o.background = "dark" -- or "light" for light mode
+vim.cmd([[colorscheme gruvbox]])
+-- vim.cmd.colorscheme("habamax")
+
+function PopulateArgs(text)
+	local command = string.format("args `rg -l %s`", text)
+	vim.cmd(command)
+end
+
+function Replace(pattern, text)
+	local command = "argdo %s/" .. pattern .. "/" .. text .. "/gc"
+	vim.cmd(command)
+end
+
+function SaveFiles()
+	local command = "argdo update"
+	vim.cmd(command)
+end
+
+vim.keymap.set("n", "<Space>rtp", function()
+	local pattern = vim.fn.input("Enter pattern to search: ")
+	local replacement = vim.fn.input("Enter replacement for pattern: ")
+
+	PopulateArgs(pattern)
+	Replace(pattern, replacement)
+	SaveFiles()
+end)
+
+

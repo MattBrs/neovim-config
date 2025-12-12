@@ -24,12 +24,14 @@ nmap <Space>s :w<CR>:w<CR>
 
 nmap <Space>gg :LazyGit<CR>
 
-" terminal
-nmap <Space>tt :ToggleTerm<CR>
-tmap <Space>tt <C-\><C-n>:ToggleTerm<CR>
+nmap <Space>fmtc :!/usr/bin/clang-format -i %:p<CR>
+
+xnoremap y "+y
+xnoremap p "+p
+
+"xnoremap p P
 
 
-xnoremap p P
 
 
 
