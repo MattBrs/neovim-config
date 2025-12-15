@@ -24,14 +24,9 @@ nmap <Space>s :w<CR>:w<CR>
 
 nmap <Space>gg :LazyGit<CR>
 
-nmap <Space>fmtc :!/usr/bin/clang-format -i %:p<CR>
-
-xnoremap y "+y
-xnoremap p "+p
+"xnoremap y "+y
+"xnoremap p "+p
 
 "xnoremap p P
 
-
-
-
-
+autocmd BufWritePre * lua vim.lsp.buf.format()

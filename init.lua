@@ -24,6 +24,7 @@ set.showmatch = true
 set.shiftwidth = 4
 set.nu = true
 
+
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
@@ -34,27 +35,25 @@ vim.cmd([[colorscheme gruvbox]])
 -- vim.cmd.colorscheme("habamax")
 
 function PopulateArgs(text)
-	local command = string.format("args `rg -l %s`", text)
-	vim.cmd(command)
+    local command = string.format("args `rg -l %s`", text)
+    vim.cmd(command)
 end
 
 function Replace(pattern, text)
-	local command = "argdo %s/" .. pattern .. "/" .. text .. "/gc"
-	vim.cmd(command)
+    local command = "argdo %s/" .. pattern .. "/" .. text .. "/gc"
+    vim.cmd(command)
 end
 
 function SaveFiles()
-	local command = "argdo update"
-	vim.cmd(command)
+    local command = "argdo update"
+    vim.cmd(command)
 end
 
 vim.keymap.set("n", "<Space>rtp", function()
-	local pattern = vim.fn.input("Enter pattern to search: ")
-	local replacement = vim.fn.input("Enter replacement for pattern: ")
+    local pattern = vim.fn.input("Enter pattern to search: ")
+    local replacement = vim.fn.input("Enter replacement for pattern: ")
 
-	PopulateArgs(pattern)
-	Replace(pattern, replacement)
-	SaveFiles()
+    PopulateArgs(pattern)
+    Replace(pattern, replacement)
+    SaveFiles()
 end)
-
-
