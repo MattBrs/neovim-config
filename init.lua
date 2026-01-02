@@ -33,6 +33,9 @@ vim.opt.swapfile = false
 vim.o.background = "dark" -- or "light" for light mode
 vim.cmd([[colorscheme gruvbox]])
 -- vim.cmd.colorscheme("habamax")
+vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
+
 
 function PopulateArgs(text)
     local command = string.format("args `rg -l %s`", text)
